@@ -33,7 +33,7 @@ namespace ConsoleApp1
             set { y = value; }
         }
 
-        public bool intersection(LineSegment L)
+        public bool Intersection(LineSegment L)
         {
             if (((x >= L.x) && (x <= L.y)) ||
                 ((y >= L.x) && (y <= L.y)) ||
