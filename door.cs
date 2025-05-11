@@ -6,35 +6,35 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class door
+    class Door
     {
-        protected bool Open;
-        protected bool Lock;
+        private bool _open;
+        private bool _lock;
 
-        public door()
+        public Door()
         {
-            Open = false;
-            Lock = false;
+            _open = false;
+            _lock = false;
         }
 
         public bool op
         {
-            get { return Open; }
-            set { Open = value; }
+            get { return _open; }
+            set { _open = value; }
         }
         public bool lo
         {
-            get { return Lock; }
-            set { Lock = value; }
+            get { return _lock; }
+            set { _lock = value; }
         }
 
-        public door(door D)
+        public Door(Door D)
         {
-            this.Open = D.Open;
-            this.Lock = D.Lock;
+            this._open = D._open;
+            this._lock = D._lock;
         }
         public bool Close()
-        {//Можно ли пройти
+        {
             if ((Open == false) && (Lock == false))
             {
                 return false;
