@@ -11,27 +11,34 @@ namespace ConsoleApp1
         private double x;
         private double y;
 
+        
         public LineSegment2()
         {
             x = 0;
             y = 0;
         }
+
+        
         public LineSegment2(double x, double y)
         {
             this.x = x;
             this.y = y;
         }
 
+        
         public double nx
         {
             get { return x; }
             set { x = value; }
         }
+
+        
         public double ny
         {
             get { return y; }
             set { y = value; }
         }
+        
 
         public static double operator !(LineSegment2 L)
         {
@@ -45,6 +52,8 @@ namespace ConsoleApp1
             }
             return 0;
         }
+
+        
         public static LineSegment2 operator ++(LineSegment2 L)
         {
             if (L.x > L.y)
@@ -59,24 +68,34 @@ namespace ConsoleApp1
             }
             return L;
         }
+
+        
         public static LineSegment2 operator -(LineSegment2 L, int nx)
         {
             L.x -= nx;
             return L;
         }
+
+        
         public static LineSegment2 operator -(int ny, LineSegment2 L)
         {
             L.y -= ny;
             return L;
         }
+
+        
         public static implicit operator int(LineSegment2 L)
         {
             return Convert.ToInt32(L.x);
         }
+
+        
         public static explicit operator double(LineSegment2 L)
         {
             return L.y;
         }
+
+        
         public static bool operator <(LineSegment2 L1, LineSegment2 L2)
         {
             if (((L1.x >= L2.x) && (L1.x <= L2.y)) ||
@@ -88,15 +107,17 @@ namespace ConsoleApp1
             }
             return false;
         }
+
+        
         public static bool operator >(LineSegment2 L1, LineSegment2 L2)
         {
             return false;
         }
+
+        
         public void Print()
         {
             Console.WriteLine("X: " + x + " Y: " + y);
         }
-
     }
-
 }
