@@ -7,7 +7,7 @@ using ConsoleApp1;
 
 namespace ConsoleApp1
 {
-    class Gates : door
+    class Gates : Door
     {
         private double _width;//Ширина ворот
         private double _price;//Цена ворот
