@@ -11,28 +11,35 @@ namespace ConsoleApp1
         private double x;
         private double y;
 
+        
         public LineSegment()
         {
             x = 0;
             y = 0;
         }
+
+        
         public LineSegment(double x, double y)
         {
             this.x = x;
             this.y = y;
         }
 
+        
         public double nx
         {
             get { return x; }
             set { x = value; }
         }
+
+        
         public double ny
         {
             get { return y; }
             set { y = value; }
         }
 
+        
         public bool Intersection(LineSegment L)
         {
             if (((x >= L.x) && (x <= L.y)) ||
@@ -44,6 +51,5 @@ namespace ConsoleApp1
             }
             return false;
         }
-
     }
 }
