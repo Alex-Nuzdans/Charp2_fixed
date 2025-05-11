@@ -92,7 +92,7 @@ namespace ConsoleApp1
         {
             return false;
         }
-        public void print()
+        public void Print()
         {
             Console.WriteLine("X: " + x + " Y: " + y);
         }
