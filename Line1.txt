@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class LineSegment
+    {
+        private double x;
+        private double y;
+
+        public LineSegment()
+        {
+            x = 0;
+            y = 0;
+        }
+        public LineSegment(double x, double y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public double nx
+        {
+            get { return x; }
+            set { x = value; }
+        }
+      
+        public double ny
+        {
+            get { return y; }
+            set { y = value; }
+        }
+
+        public bool intersection(LineSegment L)
+        {
+            if (((x >= L.x) && (x <= L.y)) ||
+                ((y >= L.x) && (y <= L.y)) ||
+                ((L.x >= x) && (L.x <= y)) ||
+                ((L.y >= x) && (L.y <= y)))
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+}
