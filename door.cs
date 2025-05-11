@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class door
+    {
+        protected bool Open;
+        protected bool Lock;
+
+        public door()
+        {
+            Open = false;
+            Lock = false;
+        }
+
+        public bool op
+        {
+            get { return Open; }
+            set { Open = value; }
+        }
+        public bool lo
+        {
+            get { return Lock; }
+            set { Lock = value; }
+        }
+
+        public door(door D)
+        {
+            this.Open = D.Open;
+            this.Lock = D.Lock;
+        }
+        public bool Close()
+        {//Можно ли пройти
+            if ((Open == false) && (Lock == false))
+            {
+                return false;
+            }
+            return true;
+        }
+        public override string ToString()
+        {
+            return ("Открыта: " + Open +
+                "\nЗафиксирована: " + Lock);
+        }
+    }
+
+}
