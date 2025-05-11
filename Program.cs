@@ -45,7 +45,7 @@ namespace Main
                 {
                     Console.WriteLine("Заперто!");
                 }
-                if (Gate.truck())
+                if (Gate.Truck())
                 {
                     Console.WriteLine("Грузовик проедет!");
                 }
@@ -55,7 +55,7 @@ namespace Main
                 }
                 Console.WriteLine("Введите валюту(dolor, euro, yane):");
                 Console.WriteLine("Цена равна: " +
-                    (Gate.prise_convert(Console.ReadLine())));
+                    (Gate.PriseConvert(Console.ReadLine())));
             }
             else if (S == "2")
             {
