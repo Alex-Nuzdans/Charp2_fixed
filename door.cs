@@ -17,22 +17,28 @@ namespace ConsoleApp1
             _lock = false;
         }
 
+        
         public bool op
         {
             get { return _open; }
             set { _open = value; }
         }
+
+        
         public bool lo
         {
             get { return _lock; }
             set { _lock = value; }
         }
+        
 
         public Door(Door D)
         {
             this._open = D._open;
             this._lock = D._lock;
         }
+
+        
         public bool Close()
         {
             if ((Open == false) && (Lock == false))
@@ -41,6 +47,8 @@ namespace ConsoleApp1
             }
             return true;
         }
+
+        
         public override string ToString()
         {
             return ("Открыта: " + Open +
