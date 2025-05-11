@@ -9,27 +9,31 @@ namespace ConsoleApp1
 {
     class Gates : door
     {
-        private double Width;//Ширина ворот
-        private double Price;//Цена ворот
-        private string Owner;//Владелец ворот
-        private string Manufacturer;//производитель ворот
+        private double _width;//Ширина ворот
+        private double _price;//Цена ворот
+        private string _owner;//Владелец ворот
+        private string _manufacturer;//производитель ворот
 
         public Gates()
         {
-            Width = 0;
-            Price = 0;
-            Owner = "";
-            Manufacturer = "";
+            _width = 0;
+            _price = 0;
+            _owner = "";
+            _manufacturer = "";
         }
+
+        
         public Gates(door door1, double width, double price,
             string owner, string manufacturer) : base(door1)
         {
-            Width = width;
-            Price = price;
-            Owner = owner;
-            Manufacturer = manufacturer;
+            _width = width;
+            _price = price;
+            _owner = owner;
+            _manufacturer = manufacturer;
         }
-        public double prise_convert(string currency)
+
+        
+        public double PriseConvert(string currency)
         {
             if (currency == "dolor")
             {
@@ -49,18 +53,22 @@ namespace ConsoleApp1
             }
             return Price;
         }
-        public bool truck()
+
+        
+        public bool Truck()
         {
-            if ((Width >= 4) && (Open == true))
+            if ((Width >= 4) && (op == true))
             {
                 return true;
             }
             return false;
         }
+
+        
         public override string ToString()
         {
-            return ("Ворота открвыты: " + Open +
-                "\nВорота зафиксирована: " + Lock +
+            return ("Ворота открвыты: " + op +
+                "\nВорота зафиксирована: " + lo +
                 "\nШиринка ворот: " + Width +
                 " м.\nЦена ворот: " + Price +
                 "\nХозяин ворот: " + Owner +
