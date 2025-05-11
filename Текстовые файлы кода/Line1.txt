@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,14 +27,13 @@ namespace ConsoleApp1
             get { return x; }
             set { x = value; }
         }
-      
         public double ny
         {
             get { return y; }
             set { y = value; }
         }
 
-        public bool intersection(LineSegment L)
+        public bool Intersection(LineSegment L)
         {
             if (((x >= L.x) && (x <= L.y)) ||
                 ((y >= L.x) && (y <= L.y)) ||
