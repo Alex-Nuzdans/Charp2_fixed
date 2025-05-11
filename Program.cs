@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using ConsoleApp1;
 namespace Main
 {
@@ -99,7 +99,7 @@ namespace Main
                 }
                 var line1 = new LineSegment(x1, y1);
                 var line2 = new LineSegment(x2, y2);
-                if (line1.intersection(line2))
+                if (line1.Intersection(line2))
                 {
                     Console.WriteLine("Они пересекаются!");
                 }
@@ -152,10 +152,10 @@ namespace Main
                 var line2 = new LineSegment2(x2, y2);
                 Console.WriteLine("Длинна первого отрезка" + !line1);
                 Console.WriteLine("Координаты первого отрезка");
-                line1.print();
+                line1.Print();
                 line1++;
                 Console.WriteLine("Расшиернные координаты первого отрезка");
-                line1.print();
+                line1.Print();
                 Console.WriteLine("Введите целое число: ");
                 var x = 1;
                 try
@@ -168,7 +168,7 @@ namespace Main
                 }
                 line1 = line1 - x;
                 Console.WriteLine("Координаты первого отрезка(x сокращён)");
-                line1.print();
+                line1.Print();
                 Console.WriteLine("Введите целое число: ");
                 try
                 {
@@ -181,7 +181,7 @@ namespace Main
                 }
                 line1 = x - line1;
                 Console.WriteLine("Координаты первого отрезка(y сокращён)");
-                line1.print();
+                line1.Print();
                 int z1 = line1;
                 Console.WriteLine("Конвертация через переменную int: " + z1);
                 double z2 = (double)line1;
